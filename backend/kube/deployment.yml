@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  selector:
+    matchLabels:
+      app: inventory-app
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: inventory-app
+        tier: backend
+        track: stable
+    spec:
+      containers:
+      - name: inventory-app-api
+        image: "571372182587.dkr.ecr.us-east-1.amazonaws.com/prod/inventory-app-backend:latest"
+        ports:
+        - name: http
+          containerPort: 8080
+      imagePullSecrets:
+      - name: aws-registry

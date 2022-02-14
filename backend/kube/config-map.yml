@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-cfg
+data:
+  Database_host: "database-3.cqcy3l1krymb.us-east-1.rds.amazonaws.com"
+  Database_user: "admin"
+  Database_password: "HELLO567"
