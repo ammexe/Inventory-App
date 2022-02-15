@@ -24,6 +24,9 @@ spec:
       - name: inventory-app-api
         image: "571372182587.dkr.ecr.us-east-1.amazonaws.com/prod/inventory-app-backend:latest"
         imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: db-creds
         resources:
           requests:
             memory: "200Mi"
