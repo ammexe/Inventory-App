@@ -19,12 +19,12 @@ module.exports = {
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
    database: {
-     username: 'admin',
+     username: process.env.username,
      dialect: 'mysql',
-     password: 'HELLO567',
+     password: process.env.password,
      database: 'MyDB',
      host:
-       'database-1.cqcy3l1krymb.us-east-1.rds.amazonaws.com',
+       process.env.host,
      logging: console.log,
    },
 
