@@ -53,3 +53,9 @@ A Jumpbox server is created to access workernodes of kubernetes and it is also h
 7. 1 t3.large and 3 t3.small costing us arroung 80-90$ month
 8. Arround 50$ a month for EKS.
 9. Upon 100% resource usage our monthly bill cannot go more than 150$ a month.
+
+### Monitoring
+Rancher also provide Grafana dashboard to monitor the services at best. Grafana dashboard is built-in in Rancher.
+
+# NOTE
+Hello team, please note that I could have used other cost effective techniques which I think would be much lesser than this one, such as AWS Fargate or Lambda or just deploying an app on EC2, but I wanted to showcase my skills in which I have mostly worked on and in which I have  most of my experience. I can add GitOps using ArgoCD to the EKS cluster as well, also some advance monitoring techniques and alerts. The purpose of this task is to showcase my skills in which I am experienced and worked with. 
