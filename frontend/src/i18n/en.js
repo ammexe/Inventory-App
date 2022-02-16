@@ -22,7 +22,7 @@ const en = {
   },
 
   app: {
-    title: 'Application Login here',
+    title: 'Application',
   },
 
   entities: {
