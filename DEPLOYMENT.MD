@@ -40,6 +40,8 @@ Database RDS is created in private subnet (dbSN1,dbSN2), no inbound or outbound 
 Cert-manager adds certificates and certificate issuers as resource types in Kubernetes clusters, and simplifies the process of obtaining, renewing and using those certificates. All public URL's sending traffic to EKS cluster are ssl encrypted.
 #### 4. DB-credentials
 Backend is passed with encrypted DB credentials to access.
+#### 4. JumpBox server (54.236.34.160)
+A Jumpbox server is created to access workernodes of kubernetes and it is also hosting our jenkins CICD pipeline. ssh file to login to public node will be provided.
 
 ### Costs
 1. We have used Nginx ingress as load balancer for our EKS cluster instead of using ALB which has saved us costs.
