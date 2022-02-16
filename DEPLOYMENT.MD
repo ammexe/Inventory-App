@@ -40,3 +40,14 @@ Database RDS is created in private subnet (dbSN1,dbSN2), no inbound or outbound 
 Cert-manager adds certificates and certificate issuers as resource types in Kubernetes clusters, and simplifies the process of obtaining, renewing and using those certificates. All public URL's sending traffic to EKS cluster are ssl encrypted.
 #### 4. DB-credentials
 Backend is passed with encrypted DB credentials to access.
+
+### Costs
+1. We have used Nginx ingress as load balancer for our EKS cluster instead of using ALB which has saved us costs.
+2. Managed ASG also helps us reduce some costs which will scale up and scale down according to resource usage.
+3. Same case with HPA of kubernetes pods.
+4. AWS cost estimates shows monthly forecasts arround 60-70$ a month.
+5. RDS is costing us the most right now then EKS and then managed node group.
+6. db.t3.micro RDS is costing us 14$ a month
+7. 1 t3.large and 3 t3.small costing us arroung 80-90$ month
+8. Arround 50$ a month for EKS.
+9. Upon 100% resource usage our monthly bill cannot go more than 150$ a month.
