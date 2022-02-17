@@ -12,6 +12,10 @@ A **NATGATEWAY** is created in public subnet so that nodes in PrivateSN1 and Pri
 
 EKS(**EKS-prod**) is created in PublicSN1, PublicSN02, PrivateSN1 and PrivateSN. The reason for assigning public and private both to EKS is explained in security section.
 
+
+![My image](/Untitled.jpeg)
+
+
 ## Applications
 
 #### [Inventory-app](https://live.inventory-app.com)
