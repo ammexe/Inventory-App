@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+
+  database:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: inventory
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 123456
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - frontend-backend-network
+    
+  backend-service:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - username=mysql
+      - password=123456
+      - host:host.docker.internal
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    networks:
+      - frontend-backend-network
+    command: ["sh", "-c", "npm run db:reset:production && npm run start:production"]
+  
+  frontend-service:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-service
+    networks:
+      - frontend-backend-network
+
+networks:
+  frontend-backend-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local

@@ -1,4 +1,4 @@
-const backendUrl = `https://api.inventory-app.com/api`;
+const backendUrl = `http://localhost:8080/api`;
 
 export default {
   backendUrl,

@@ -1,5 +1,5 @@
-FROM node:11.10.0-slim
-WORKDIR /usr/src/app
+FROM node:10 as base
+WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .

@@ -19,12 +19,11 @@ module.exports = {
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
    database: {
-     username: process.env.username,
+     username: 'mysql',
      dialect: 'mysql',
-     password: process.env.password,
-     database: 'MyDB',
-     host:
-       process.env.host,
+     password: '123456',
+     database: 'inventory',
+     host: 'host.docker.internal',
      logging: console.log,
    },
 
