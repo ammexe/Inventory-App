@@ -7,6 +7,9 @@ It is an application working with Node.js in the backend with SQL database (Post
 
 The goal of this repository is to provide a real world scenario application that is ready to be deployed.
 test1
+test2
+test3
+test4
 ## Build & Run
 
 1. Install prerequisistes needed based on project description.
