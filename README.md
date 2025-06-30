@@ -6,7 +6,7 @@ This is a very simple and basic product inventory application.
 It is an application working with Node.js in the backend with SQL database (Postgress or MySQL) as a persistant layer and React with Bootstrap on the frontend.
 
 The goal of this repository is to provide a real world scenario application that is ready to be deployed.
-
+1234
 ## Build & Run
 
 1. Install prerequisistes needed based on project description.
